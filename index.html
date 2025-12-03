@@ -4,68 +4,40 @@
 <meta charset="UTF-8">
 <title>ExamMaster LK</title>
 <style>
-body{font-family: Arial; margin:0; background:#f4f4f4;}
-header{background:#1256C0; padding:20px; color:white; text-align:center; font-size:28px; font-weight:bold;}
-.container{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:20px;}
-.card{background:white; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2); text-decoration:none; color:black;}
-.card:hover{transform:scale(1.03);}
-h3{margin:0; color:#1256C0;}
+  body{font-family: Arial, margin:0; background:#f4f4f4;}
+  header{background:#1256C0; padding:20px; color:white; text-align:center; font-size:28px; font-weight:bold;}
+  .hero {display:flex; gap:20px; justify-content:center; padding:40px; flex-wrap:wrap;}
+  .big-card{
+    background:white; width:320px; border-radius:12px; padding:24px; box-shadow:0 6px 18px rgba(0,0,0,0.12);
+    text-align:center; text-decoration:none; color:black;
+  }
+  .icon {font-size:48px; margin-bottom:12px;}
+  h2{color:#0F1E3E; text-align:center; margin-top:10px;}
+  .small-note{text-align:center; color:#333; margin-bottom:30px;}
+  a.big-card:hover{transform:translateY(-6px); transition:all .18s ease;}
 </style>
 </head>
 <body>
-
 <header>ExamMaster LK</header>
 
-<h2 style="padding:20px;">A/L Subjects – Resources</h2>
-<div class="container">
+<div style="max-width:1000px; margin:0 auto;">
+  <h2 style="padding-top:18px;">Welcome — Choose a category</h2>
+  <p class="small-note">Access A/L subject resources or SLIM PGDip marketing modules. All links open resources in Google Drive.</p>
 
-  <a class="card" href="accounting.html"><h3>Accounting</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="agri.html"><h3>Agriculture</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="bio.html"><h3>Biology</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="bst.html"><h3>BST</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="buddhism.html"><h3>Buddhism</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="business.html"><h3>Business Studies</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="chemistry.html"><h3>Chemistry</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="commaths.html"><h3>Combined Maths</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="dancing.html"><h3>Dancing</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="econ.html"><h3>Economics</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="et.html"><h3>Engineering Technology</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="geography.html"><h3>Geography</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="history-india.html"><h3>History (India)</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="history-srilanka.html"><h3>History (Sri Lanka)</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="home-science.html"><h3>Home Science</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="ict.html"><h3>ICT</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="languages.html"><h3>Languages</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="logic.html"><h3>Logic</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="media.html"><h3>Media</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="music.html"><h3>Music</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="physics.html"><h3>Physics</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="political-science.html"><h3>Political Science</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="sft.html"><h3>SFT</h3><p>Google Drive Folder</p></a>
-  <a class="card" href="stats.html"><h3>Statistics</h3><p>Google Drive Folder</p></a>
+  <div class="hero">
+    <a class="big-card" href="al-subjects.html" title="A/L Subjects">
+      <div class="icon">📘</div>
+      <h3>A/L Subjects – Resources</h3>
+      <p>Past papers, notes & mind maps for O/L & A/L subjects.</p>
+    </a>
 
-</div>
-
-<h2 style="padding:20px;">SLIM PGDip Modules</h2>
-<div class="container">
-  <a class="card" href="pom.html"><h3>POM</h3><p>Principles of Marketing</p></a>
-  <a class="card" href="icb.html"><h3>ICB</h3><p>Influencing Consumer Behavior</p></a>
-  <a class="card" href="dml.html"><h3>DML</h3><p>Digital Marketing Landscape</p></a>
-  <a class="card" href="mcb.html"><h3>MCB</h3><p>Management & Communication for Business</p></a>
-  <a class="card" href="som.html"><h3>SOM</h3><p>Sales Operations Management</p></a>
-  <a class="card" href="mbp.html"><h3>MBP</h3><p>Managing Brands for Performance</p></a>
-  <a class="card" href="imc.html"><h3>IMC</h3><p>Integrating Marketing Communication</p></a>
-  <a class="card" href="dmm.html"><h3>DMM</h3><p>Digital Marketing Management</p></a>
-  <a class="card" href="mep.html"><h3>MEP</h3><p>Marketing Environment & Planning</p></a>
-  <a class="card" href="plm.html"><h3>PLM</h3><p>Purpose-Led Marketing</p></a>
-  <a class="card" href="gms.html"><h3>GMS</h3><p>Global Marketing Strategy</p></a>
-  <a class="card" href="fdm.html"><h3>FDM</h3><p>Finance for Decision-Making</p></a>
-  <a class="card" href="brm.html"><h3>BRM</h3><p>Business Research Methods</p></a>
-  <a class="card" href="irp.html"><h3>IRP</h3><p>Integrated Research Project</p></a>
-  <a class="card" href="sor.html"><h3>SOR</h3><p>Seminar on Research</p></a>
-  <a class="card" href="pld.html"><h3>PLD</h3><p>Personality & Leadership Development</p></a>
+    <a class="big-card" href="slim-modules.html" title="SLIM PGDip Modules">
+      <div class="icon">🎓</div>
+      <h3>SLIM PGDip Modules</h3>
+      <p>Principles of Marketing, IMC, DMM and all PGDip modules.</p>
+    </a>
+  </div>
 </div>
 
 </body>
 </html>
-
