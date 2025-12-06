@@ -4,17 +4,83 @@
 <meta charset="UTF-8">
 <title>ExamMaster LK</title>
 <style>
-body { font-family: Arial; margin:0; background:#f4f4f4; }
-header { background:#1256C0; padding:20px; color:white; text-align:center; font-size:28px; font-weight:bold; }
+/* Body with background image and overlay */
+body {
+    font-family: Arial;
+    margin:0;
+    background: url('background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    position: relative;
+    color: #fff;
+}
 
-.message {
-    background:white;
-    margin:20px;
+/* Dark overlay for readability */
+body::before {
+    content:"";
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background: rgba(0,0,0,0.4);
+    z-index:-1;
+}
+
+header {
+    background:#1256C0;
     padding:20px;
-    border-radius:10px;
+    color:white;
+    text-align:center;
+    font-size:28px;
+    font-weight:bold;
+    position:relative;
+}
+
+/* Menu Icon */
+.menu-icon {
+    position:absolute;
+    top:20px;
+    right:20px;
+    font-size:28px;
+    cursor:pointer;
+    user-select:none;
+}
+
+/* Dropdown menu */
+.dropdown {
+    display:none;
+    position:absolute;
+    top:60px;
+    right:20px;
+    background:white;
+    border:1px solid #ddd;
+    border-radius:8px;
+    box-shadow:0 2px 6px rgba(0,0,0,0.2);
+    z-index:1000;
+    min-width:150px;
+}
+
+.dropdown a {
+    display:block;
+    padding:10px 15px;
+    text-decoration:none;
+    color:#1256C0;
+    font-weight:bold;
+    font-size:14px;
+}
+
+.dropdown a:hover {
+    background:#1256C0;
+    color:white;
+}
+
+/* Centered message */
+.message {
+    text-align:center;
     font-size:18px;
     line-height:1.5;
-    box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    color:#fff;
+    margin:20px 0;
 }
 
 .container { 
@@ -46,26 +112,66 @@ header { background:#1256C0; padding:20px; color:white; text-align:center; font-
     display:block; 
     color:#1256C0; 
 }
+
+.card p {
+    font-size:16px;
+    color:#555;
+    margin-bottom:8px;
+}
 </style>
 </head>
 <body>
 
-<header>ExamMaster LK</header>
+<header>
+    ExamMaster LK
+    <span class="menu-icon" onclick="toggleMenu()">☰</span>
+    <div class="dropdown" id="menuDropdown">
+        <a href="#">5th Grade</a>
+        <a href="#">O/Level</a>
+        <a href="#">A/Level</a>
+    </div>
+</header>
+
+<p class="message">
+O/Level, A/Level කරන නංගිලා මල්ලිලාටත් ගොඩක් වැදගත් වෙන Google Drive Links එකතුවක් තමයි මේ Website එකේ තියෙන්නේ.
+Notes හොය හොය කාලය නාස්ති කරගන්න එපා.
+මේ Links ටික Save කරගන්න, ඒ වගේම යාලුවන්ටත් බලන්න  Website එක Share කරන්න. 
+</p>
 
 <div class="container">
   <a class="card" href="al-subjects.html">
     <span class="card-icon">📘</span>
-    <p style="font-size:16px; color:#555; margin-bottom:8px;">Access all A/L subject resources and past papers</p>
+    <p>Access all A/L subject resources and past papers</p>
     A/L Subjects – Resources
   </a>
 
   <a class="card" href="slim-modules.html">
     <span class="card-icon">🎓</span>
-    <p style="font-size:16px; color:#555; margin-bottom:8px;">Explore SLIM PGDip marketing modules and materials</p>
+    <p>Explore SLIM PGDip marketing modules and materials</p>
     SLIM PGDip Modules
   </a>
 </div>
 
+<script>
+function toggleMenu() {
+    var menu = document.getElementById("menuDropdown");
+    if (menu.style.display === "block") {
+        menu.style.display = "none";
+    } else {
+        menu.style.display = "block";
+    }
+}
+
+// Close dropdown if clicked outside
+window.onclick = function(event) {
+    if (!event.target.matches('.menu-icon')) {
+        var dropdown = document.getElementById("menuDropdown");
+        if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+        }
+    }
+}
+</script>
+
 </body>
 </html>
-
