@@ -1,84 +1,92 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
 <meta charset="UTF-8">
 <title>ExamMaster LK</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        background: #f4f4f4;
+    body{font-family: Arial; margin:0; background:#f4f4f4;}
+    header{background:#1256C0; padding:20px; color:white; text-align:center; font-size:30px; font-weight:bold;}
+
+    /* Menu */
+    nav{
+        background:white;
+        padding:15px;
+        display:flex;
+        justify-content:center;
+        gap:30px;
+        font-size:20px;
+        font-weight:bold;
+        border-bottom:2px solid #ddd;
     }
-    header {
-        background: #1256C0;
-        padding: 20px;
-        color: white;
-        text-align: center;
-        font-size: 28px;
-        font-weight: bold;
+    nav a{
+        text-decoration:none;
+        color:#1256C0;
+        padding:8px 15px;
+        border-radius:8px;
     }
-    .menu-section {
-        padding: 25px;
-        text-align: center;
+    nav a:hover{
+        background:#1256C0;
+        color:white;
     }
-    .menu-title {
-        font-size: 24px;
-        font-weight: bold;
-        color: #1256C0;
-        margin-bottom: 15px;
-    }
-    .menu-container {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
-        padding: 10px 20px;
-    }
-    .menu-card {
-        background: white;
-        padding: 25px;
-        border-radius: 12px;
-        box-shadow: 0 3px 7px rgba(0,0,0,0.2);
-        text-decoration: none;
-        color: black;
-        font-size: 22px;
-        font-weight: bold;
-        text-align: center;
-        transition: 0.2s;
-    }
-    .menu-card:hover {
-        transform: scale(1.05);
-        background: #eaf1ff;
-    }
+
+    .container{display:grid; grid-template-columns:repeat(auto-fit,minmax(250px,1fr)); gap:20px; padding:20px;}
+    .card{background:white; padding:20px; border-radius:10px; box-shadow:0 2px 6px rgba(0,0,0,0.2); text-decoration:none; color:black;}
+    .card:hover{transform:scale(1.03);}
+    h2{padding:20px; margin:0; color:#1256C0;}
+    h3{margin:0; color:#1256C0;}
 </style>
 </head>
 <body>
 
 <header>ExamMaster LK</header>
 
-<!-- MAIN MENU SECTION -->
-<div class="menu-section">
-    <div class="menu-title">Choose Your Exam Category</div>
+<!-- Top Menu -->
+<nav>
+    <a href="#">A/Level</a>
+    <a href="#">O/Level</a>
+    <a href="#">Grade 5</a>
+</nav>
 
-    <div class="menu-container">
-        <a class="menu-card" href="al-home.html">A/Level</a>
-        <a class="menu-card" href="ol-home.html">O/Level</a>
-        <a class="menu-card" href="grade5-home.html">Grade 5 Scholarship</a>
-    </div>
+<!-- Welcome -->
+<p style="text-align:center; font-size:18px; padding:10px;">
+    Welcome — Choose a category<br>
+    Access A/L subject resources.<br>
+    All links open resources in Google Drive.
+</p>
+
+<!-- Sinhala Message -->
+<p style="text-align:center; font-size:18px; padding:10px; color:#333;">
+    O/Level, A/Level කරන නංගිලා මල්ලිලාටත් ගොඩක් වැදගත් වෙන Google Drive Links එකතුවක් තමයි මේ තියෙන්නේ.
+    Notes හොය හොය කාලය නාස්ති කරගන්න එපා.
+    මේ Links ටික Save කරගන්න, ඒ වගේම යාලුවන්ටත් බලන්න Share කරන්න.
+</p>
+
+<!-- A/L Section -->
+<h2>A/L Past Papers & Resources</h2>
+<div class="container">
+    <a class="card" href="al-maths.html"><h3>Maths Stream</h3><p>Past Papers</p></a>
+    <a class="card" href="al-all-subjects.html"><h3>All Subjects</h3><p>Subject-wise Drive Links</p></a>
 </div>
 
-<!-- FUTURE SECTION: SLIM MODULES -->
-<div class="menu-section">
-    <div class="menu-title">SLIM PGDip Modules</div>
-
-    <div class="menu-container">
-        <a class="menu-card" href="pom.html">POM</a>
-        <a class="menu-card" href="imc.html">IMC</a>
-        <a class="menu-card" href="icb.html">ICB</a>
-        <a class="menu-card" href="dml.html">DML</a>
-        <a class="menu-card" href="plm.html">PLM</a>
-        <!-- Add more modules as needed -->
-    </div>
+<!-- SLIM Section -->
+<h2>SLIM PGDip Modules</h2>
+<div class="container">
+  <a class="card" href="pom.html"><h3>POM</h3><p>Principles of Marketing</p></a>
+  <a class="card" href="icb.html"><h3>ICB</h3><p>Influencing Consumer Behavior</p></a>
+  <a class="card" href="dml.html"><h3>DML</h3><p>Digital Marketing Landscape</p></a>
+  <a class="card" href="mcb.html"><h3>MCB</h3><p>Management & Communication for Business</p></a>
+  <a class="card" href="som.html"><h3>SOM</h3><p>Sales Operations Management</p></a>
+  <a class="card" href="mbp.html"><h3>MBP</h3><p>Managing Brands for Performance</p></a>
+  <a class="card" href="imc.html"><h3>IMC</h3><p>Integrating Marketing Communication</p></a>
+  <a class="card" href="dmm.html"><h3>DMM</h3><p>Digital Marketing Management</p></a>
+  <a class="card" href="mep.html"><h3>MEP</h3><p>Marketing Environment & Planning</p></a>
+  <a class="card" href="plm.html"><h3>PLM</h3><p>Purpose-Led Marketing</p></a>
+  <a class="card" href="gms.html"><h3>GMS</h3><p>Global Marketing Strategy</p></a>
+  <a class="card" href="fdm.html"><h3>FDM</h3><p>Finance for Decision-Making</p></a>
+  <a class="card" href="brm.html"><h3>BRM</h3><p>Business Research Methods</p></a>
+  <a class="card" href="irp.html"><h3>IRP</h3><p>Integrated Research Project</p></a>
+  <a class="card" href="sor.html"><h3>SOR</h3><p>Seminar on Research</p></a>
+  <a class="card" href="pld.html"><h3>PLD</h3><p>Personality & Leadership Development</p></a>
 </div>
 
 </body>
